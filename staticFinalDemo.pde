@@ -1,12 +1,13 @@
-class Thing {
+static class Thing {
   
   int numberThatEveryThingHas;
+  PImage imageThatEveryThingHas;
   
   // A static final variable like this can be useful 
   // for configuring things that are shared among all objects of this class
   // but need to be defined only once.
   static final int numberThatsEqualForAllThings = 10;
-   
+  
   public void setNumber(int x) {
     numberThatEveryThingHas = x; 
   }
@@ -17,7 +18,8 @@ class Thing {
   
   public void doSomething() {
     println("This object has a variable with value " + this.numberThatEveryThingHas);
-    println("This class has a (final static) variable with value " + this.numberThatsEqualForAllThings);
+    println("This class has a (final static) variable with value " + this.numberThatsEqualForAllThings); // gives warning
+    println("This class has a (final static) variable with value " + Thing.numberThatsEqualForAllThings); // static members should be used like this
   }
 
 }
