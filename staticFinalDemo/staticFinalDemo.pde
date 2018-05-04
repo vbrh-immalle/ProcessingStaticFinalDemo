@@ -7,6 +7,7 @@ static class Thing {
   // for configuring things that are shared among all objects of this class
   // but need to be defined only once.
   static final int numberThatsEqualForAllThings = 10;
+  // static final PImage imageThatsEqualForAllThings; // this is problematic!
   
   public void setNumber(int x) {
     numberThatEveryThingHas = x; 
